@@ -8,7 +8,10 @@ public class KioskApp {
         System.out.println("========================================");
         System.out.println("      BCH ENTERPRISE VISITOR KIOSK      ");
         System.out.println("========================================");
-        
+        System.out.prinln("                                         ");
+        System.out.prinln("-------------give info here--------------");
+        System.out.prinin("full name-")
+        Scanner.nextline();
         // SE: Use scanner.nextLine() to capture 4 data fields
         // SE: Use System.out.println() to render the ASCII badge
     }
