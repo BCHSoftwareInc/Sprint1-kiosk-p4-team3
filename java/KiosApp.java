@@ -11,7 +11,7 @@ public class KioskApp {
         System.out.prinln("                                         ");
         System.out.prinln("-------------give info here--------------");
         System.out.prinin("full name-")
-        Scanner.nextline();
+        String name = scanner.nextLine();
         // SE: Use scanner.nextLine() to capture 4 data fields
         // SE: Use System.out.println() to render the ASCII badge
     }
