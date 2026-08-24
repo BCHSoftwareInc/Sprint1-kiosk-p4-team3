@@ -8,6 +8,3 @@
 
 **Official CCA Clearance Signature:** ____________________
 
-- normal use: emails, real roles/names, etc
-- edgecase: short/long emails, emails with special chars as defined in rfc 5322
-- invalid: special chars, escapes, variables, etc
