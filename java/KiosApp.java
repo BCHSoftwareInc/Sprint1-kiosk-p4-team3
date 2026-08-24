@@ -19,6 +19,9 @@ public class user_stuff
         String acess = scanner.nextLine();
         System.out.println("|issuer:                                 |");
         String issuer = scanner.nextLine();
+        System.out.println("-------------------------------");
+        System.out.println("|   Apex Entertaninment pass  |");
+        System.out.println("-------------------------------");
         System.out.println(name);
         System.out.println(email);
         System.out.println(org);
