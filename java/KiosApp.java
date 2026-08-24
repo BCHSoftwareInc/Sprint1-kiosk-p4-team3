@@ -4,14 +4,25 @@ public class user_stuff
 {
     public static void main(String args[])
     {
-        Scanner jarrimia = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.println("|========================================|");
         System.out.println("|      BCH ENTERPRISE VISITOR KIOSK      |");
         System.out.println("|========================================|");
         System.out.println("|------------give info here--------------|");
         System.out.println("|Attendee:                               |");
-        
-        String a = jarrimia.nextLine();
-        System.out.println(a);
+        String name = scanner.nextLine();
+        System.out.println("|email address:                          |");
+        String email = scanner.nextLine();
+        System.out.println("|org:                                    |");
+        String org = scanner.nextLine();
+        System.out.println("|acess:                                  |");
+        String acess = scanner.nextLine();
+        System.out.println("|issuer:                                 |");
+        String issuer = scanner.nextLine();
+        System.out.println(name);
+        System.out.println(email);
+        System.out.println(org);
+        System.out.println(acess);
+        System.out.println(issuer);
 }
 }
