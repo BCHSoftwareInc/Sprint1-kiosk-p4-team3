@@ -1,11 +1,11 @@
-================================================================================
+
 BCH SOFTWARE INC. | ENTERPRISE PRODUCT SPECIFICATION BRIEF
-================================================================================
+===
 PROJECT TITLE:    Apex Self-Service Terminal & Registration Kiosk
 SPRINT CYCLE:     Sprint 1 - Core Input/Output & Personalization
 TARGET CLIENT:    Apex Entertainment / BCH Facility Services
 CLEARANCE LEVEL:  Level 1 - Public Console Terminal
-================================================================================
+===
 
 1. EXECUTIVE SUMMARY
 Apex Entertainment requires a lightweight terminal application to register event
