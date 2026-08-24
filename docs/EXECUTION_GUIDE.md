@@ -1,9 +1,8 @@
-================================================================================
 👥 BCH SOFTWARE SCRUM ROLES: SPRINT 1 EXECUTION GUIDE
-================================================================================
---------------------------------------------------------------------------------
+===
+---
 PRODUCT MANAGER (PM)
---------------------------------------------------------------------------------
+---
 Add Card 6 ("[PM] Sprint Progress Monitoring & Git Sync") to yourself.
 • Daily Standup: Lead 2-minute standup (What did you do? Doing today? blockers?)
 • Quality: Confirm QA sweeps pass and CCA signs off before closing tasks.
