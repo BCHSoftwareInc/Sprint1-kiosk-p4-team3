@@ -11,13 +11,13 @@ public class user_stuff
         System.out.println("|------------give info here--------------|");
         System.out.println("|Attendee:                               |");
         String name = scanner.nextLine();
-        System.out.println("|email address:                          |");
+        System.out.println("|Email address:                          |");
         String email = scanner.nextLine();
-        System.out.println("|org:                                    |");
+        System.out.println("|Org:                                    |");
         String org = scanner.nextLine();
-        System.out.println("|acess:                                  |");
+        System.out.println("|Acess:                                  |");
         String acess = scanner.nextLine();
-        System.out.println("|issuer:                                 |");
+        System.out.println("|Issuer:                                 |");
         String issuer = scanner.nextLine();
         System.out.println("-------------------------------");
         System.out.println("|   Apex Entertaninment pass  |");
