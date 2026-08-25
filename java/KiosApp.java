@@ -1,33 +1,43 @@
-
 import java.util.Scanner;
 
-public class user_stuff
+public class KiosApp
 {
-    public static void main(String args[])
+    public static void main(String[] args)
     {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("|========================================|");
-        System.out.println("|      BCH ENTERPRISE VISITOR KIOSK      |");
-        System.out.println("|========================================|");
-        System.out.println("|------------give info here--------------|");
-        System.out.println("|Attendee:                               |");
+
+        System.out.println("+------------------------------------------+");
+        System.out.println("|          APEX VISITOR CHECK-IN           |");
+        System.out.println("+------------------------------------------+");
+        System.out.println("Please enter your registration details.     ");
+        System.out.println();
+
+        // TODO(ethan): Look into and implement input sanitization methods.
+        System.out.print("Enter Full Name: ");
         String name = scanner.nextLine();
-        System.out.println("|email address:                          |");
-        String email = scanner.nextLine();
-        System.out.println("|org:                                    |");
+
+        System.out.print("Enter Organization: ");
         String org = scanner.nextLine();
-        System.out.println("|acess:                                  |");
-        String acess = scanner.nextLine();
-        System.out.println("|issuer:                                 |");
-        String issuer = scanner.nextLine();
-        System.out.println("-------------------------------");
-        System.out.println("|   Apex Entertaninment pass  |");
-        System.out.println("-------------------------------");
-        System.out.println(name);
-        System.out.println(email);
-        System.out.println(org);
-        System.out.println(acess);
-        System.out.println(issuer);
-        System.out.println("_______________________________");
-}
+
+        System.out.print("Enter Contact Email: ");
+        String email = scanner.nextLine();
+
+        System.out.print("Enter Access Level: ");
+        String access = scanner.nextLine();
+
+        // TODO(ethan): Figure out how to dynamically scale padding to keep formatting correct.
+        System.out.println();
+        System.out.println("+------------------------------------------+");
+        System.out.println("|         APEX ENTERTAINMENT PASS          |");
+        System.out.println("+------------------------------------------+");
+        System.out.println("|                                          |");
+        System.out.println("| ATTENDEE : " + name + " |");
+        System.out.println("| ORG      :" + org + " |");
+        System.out.println("| CONTACT  :" + email + " |");
+        System.out.println("| ACCESS   :" + access + " |");
+        System.out.println("| ISSUER   : BCH Software Terminal System  |");
+        System.out.println("+------------------------------------------+");
+
+        scanner.close();
+    }
 }
