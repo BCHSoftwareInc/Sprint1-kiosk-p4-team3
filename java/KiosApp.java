@@ -12,7 +12,6 @@ public class KiosApp
         System.out.println("Please enter your registration details.     ");
         System.out.println();
 
-        // TODO(ethan): Look into and implement input sanitization methods.
         System.out.print("Enter Full Name: ");
         String name = scanner.nextLine();
 
@@ -25,6 +24,13 @@ public class KiosApp
         System.out.print("Enter Access Level: ");
         String access = scanner.nextLine();
 
+        // first pass of input sanitization, removes tab characters and replaces them with a space.
+        // TODO(ethan): implement sanitization that removes special chars in applicable fields.
+        name = name.replace("\t", " ")
+        org = org.replace("\t", " ")
+        email = email.replace("\t", " ")
+        access = access.replace("\t", " ")
+        
         // TODO(ethan/daniel): Figure out how to dynamically scale padding to keep formatting correct.
         System.out.println();
         System.out.println("+------------------------------------------+");
