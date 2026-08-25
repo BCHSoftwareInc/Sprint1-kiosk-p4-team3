@@ -1,4 +1,3 @@
-
 import java.util.Scanner;
 
 public class user_stuff
@@ -23,11 +22,11 @@ public class user_stuff
         System.out.println("-------------------------------");
         System.out.println("|   Apex Entertaninment pass  |");
         System.out.println("-------------------------------");
-        System.out.println(name);
-        System.out.println(email);
-        System.out.println(org);
-        System.out.println(acess);
-        System.out.println(issuer);
+        System.out.println("| Attendee:" + name +"        |");
+        System.out.println("| Contact :" + email +"       |");
+        System.out.println("| Org     :" + org +"         |");
+        System.out.println("| Acess   :" + acess +"       |");
+        System.out.println("| Issuer  :" + issuer +"      |");
         System.out.println("_______________________________");
 }
 }
