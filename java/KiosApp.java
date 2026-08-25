@@ -26,10 +26,10 @@ public class KiosApp
 
         // first pass of input sanitization, removes tab characters and replaces them with a space.
         // TODO(ethan): implement sanitization that removes special chars in applicable fields.
-        name = name.replace("\t", " ")
-        org = org.replace("\t", " ")
-        email = email.replace("\t", " ")
-        access = access.replace("\t", " ")
+        name = name.replace("\t", " ");
+        org = org.replace("\t", " ");
+        email = email.replace("\t", " ");
+        access = access.replace("\t", " ");
         
         // TODO(ethan/daniel): Figure out how to dynamically scale padding to keep formatting correct.
         System.out.println();
