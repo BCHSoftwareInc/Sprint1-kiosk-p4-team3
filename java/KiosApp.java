@@ -25,7 +25,7 @@ public class KiosApp
         System.out.print("Enter Access Level: ");
         String access = scanner.nextLine();
 
-        // TODO(ethan): Figure out how to dynamically scale padding to keep formatting correct.
+        // TODO(ethan/daniel): Figure out how to dynamically scale padding to keep formatting correct.
         System.out.println();
         System.out.println("+------------------------------------------+");
         System.out.println("|         APEX ENTERTAINMENT PASS          |");
