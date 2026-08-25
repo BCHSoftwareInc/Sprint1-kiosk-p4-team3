@@ -27,6 +27,6 @@ public class user_stuff
         System.out.println("| Org     :" + String.format("%-25s", org) +"|");
         System.out.println("| Acess   :" + String.format("%-25s", acess) +"|");
         System.out.println("| Issuer  :" + String.format("%-25s", issuer)+"|");
-        System.out.println("_______________________________");
+        System.out.println("_____________________________________");
 }
 }
