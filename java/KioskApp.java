@@ -13,7 +13,7 @@ public class KioskApp
 
         // get info from user
         System.out.print("Enter First/Last Name: ");
-        String name = scanner.nextLine().trim(); // trim() removes leading and trailing spaces, tabs, and return chars
+        String name = scanner.nextLine().trim(); // trim() removes leading and trailing whitespaces
         
         System.out.print("Enter Organization: ");
         String org = scanner.nextLine().trim();
@@ -24,9 +24,11 @@ public class KioskApp
         System.out.print("Enter Access Level: ");
         String access = scanner.nextLine().trim();
 
+        // TODO(ethan): Strip out invalid values from all fields (special chars, tabs, excessive whitespace, etc)
+        // TODO(ethan): resolve issue 10, maybe via replaceAll()
         
         // print pass
-        // %-29.29s |%n is what dynamically changes padding. println cant do that, hence why use printf
+        // %-29.29s |%n is what dynamically changes padding. println cant do that, hence why use printf. could use string.format but that is clunky
         System.out.println();
         System.out.println("+------------------------------------------+");
         System.out.println("|         APEX ENTERTAINMENT PASS          |");
