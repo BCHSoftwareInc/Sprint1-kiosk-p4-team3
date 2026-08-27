@@ -24,7 +24,19 @@ public class KioskApp
         System.out.print("Enter Access Level: ");
         String access = scanner.nextLine().trim();
 
-        // TODO(ethan): Strip out invalid values from all fields (special chars, tabs, excessive whitespace, etc)
+
+        // heres where do sanitization pass 1 to take out tab chars which break formatting
+        // also all whitespaces (\t, \n, \r, space, etc) in emails
+        // this simply replaces tabs and multiple spaces with single spaces
+        name = name.replaceAll("\t| {2,}", " "); // regex is funky
+        org = org.replaceAll("\t| {2,}", " ");
+        email = email.replaceAll("\s+", ""); // remove all whitespace from emails
+
+        // sanitization pass 2 to remove special chars from their fields
+        name = name.replaceAll("[$%#@^&*+=?<>{}\\[\\]\\\\|~`]", "");
+        org = org.replaceAll("[$%^*<>{}\\[\\]\\\\|~`]", ""); // kind of grey zone, some orgs are silly with chars
+        email = email.replaceAll("[ ()\\<\\>{}\\[\\]\\\\,]", ""); // strip all but valid in rfc 5322
+
         // TODO(ethan): resolve issue 10, maybe via replaceAll()
         
         // print pass
