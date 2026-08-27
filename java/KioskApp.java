@@ -31,7 +31,7 @@ public class KioskApp
         // this simply replaces tabs and multiple spaces with single spaces
         name = name.replaceAll("\t| {2,}", " "); // regex is funky
         org = org.replaceAll("\t| {2,}", " ");
-        email = email.replaceAll("\s+", ""); // remove all whitespace from emails
+        email = email.replaceAll("\\s+", ""); // remove all whitespace from emails
 
         // sanitization pass 2 to remove special chars from their fields
         name = name.replaceAll("[$%#@^&*+=?<>{}\\[\\]\\\\|~`]", "");
