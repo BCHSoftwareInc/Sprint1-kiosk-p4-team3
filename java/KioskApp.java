@@ -5,10 +5,10 @@ public class KioskApp
     public static void main(String args[])
     {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("|========================================|");
-        System.out.println("|      BCH ENTERPRISE VISITOR KIOSK      |");
-        System.out.println("|========================================|");
-        System.out.println("Please enter your registration details.     ");
+        System.out.println("|==========================================|");
+        System.out.println("|       BCH ENTERPRISE VISITOR KIOSK       |");
+        System.out.println("|==========================================|");
+        System.out.println("| Please enter your registration details.  |");
         System.out.println();
 
         // get info from user
@@ -21,22 +21,27 @@ public class KioskApp
         System.out.print("Enter Contact Email: ");
         String email = scanner.nextLine().trim();
 
-        System.out.println("Access Levels: 1=VIP  2=Speaker  3=Attendee  4=Vendor  5=Staff");
-        System.out.print("Enter Access Level Number (1-5): ");
+        System.out.println("Access Levels:");
+        System.out.println("  1 - VIP");
+        System.out.println("  2 - Speaker");
+        System.out.println("  3 - Attendee");
+        System.out.println("  4 - Vendor");
+        System.out.println("  5 - Staff");
+        System.out.print("Enter Access Level (1-5): ");
         String access = scanner.nextLine().trim();
 
 
         // heres where do sanitization pass 1 to take out tab chars which break formatting
         // also all whitespaces (\t, \n, \r, space, etc) in emails
         // this simply replaces tabs and multiple spaces with single spaces
-        name = name.replaceAll("\t| {2,}", " "); // regex is funky
-        org = org.replaceAll("\t| {2,}", " ");
+        name = name.replaceAll("\\s+", " "); // regex is funky
+        org = org.replaceAll("\\s+", " ");
         email = email.replaceAll("\\s+", ""); // remove all whitespace from emails
 
         // sanitization pass 2 to remove special chars from their fields
         name = name.replaceAll("[$%#@^&*+=?<>{}\\[\\]\\\\|~`]", "");
         org = org.replaceAll("[$%^*<>{}\\[\\]\\\\|~`]", ""); // kind of grey zone, some orgs are silly with chars
-        email = email.replaceAll("[ ()\\<\\>{}\\[\\]\\\\,]", ""); // strip all but valid in rfc 5322
+        email = email.replaceAll("[ ()<>{}\\[\\]\\\\,]", ""); // strip all but valid in rfc 5322
 
         // a way to select access tier instead of manually typing it out (issue 10)
         // idea is: take numerical input, strip out any and all other chars, then strip to one number and replace with proper access
@@ -55,17 +60,17 @@ public class KioskApp
         // print pass
         // %-29.29s |%n is what dynamically changes padding. println cant do that, hence why use printf. could use string.format but that is clunky and i already wrote this
         System.out.println();
-        System.out.println("+------------------------------------------+");
+        System.out.println("|==========================================|");
         System.out.println("|         APEX ENTERTAINMENT PASS          |");
-        System.out.println("+------------------------------------------+");
+        System.out.println("|==========================================|");
         System.out.println("|                                          |");
         System.out.printf("| ATTENDEE : %-29.29s |%n", name);
         System.out.printf("| ORG      : %-29.29s |%n", org);
         System.out.printf("| CONTACT  : %-29.29s |%n", email);
         System.out.printf("| ACCESS   : %-29.29s |%n", access);
         System.out.println("| ISSUER   : BCH Software Terminal System  |");
-        System.out.println("+------------------------------------------+");
+        System.out.println("|==========================================|");
 
-        scanner.close();
+        scanner.close(); // good practice to close unused resources
     }
 }
