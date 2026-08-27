@@ -37,7 +37,19 @@ public class KioskApp
         org = org.replaceAll("[$%^*<>{}\\[\\]\\\\|~`]", ""); // kind of grey zone, some orgs are silly with chars
         email = email.replaceAll("[ ()\\<\\>{}\\[\\]\\\\,]", ""); // strip all but valid in rfc 5322
 
-        // TODO(ethan): resolve issue 10, maybe via replaceAll()
+        // a way to select access tier instead of manually typing it out (issue 10)
+        // idea is: take numerical input, strip out any and all other chars, then strip to one number and replace with proper access
+        // bit janky but without if/else statements its the best can do
+        access = access.replaceAll("[^0-9]", ""); // keep digits only
+        access = access.replaceAll("(?<=.).", ""); // keep first digit only (cant use "12" to get "VIPSpeaker")
+        // map digit to access level
+        access = access.replaceAll("^1$", "VIP")
+            .replaceAll("^2$", "Speaker")
+            .replaceAll("^3$", "Attendee") // note the missing semicolons and access = access at the beginning
+            .replaceAll("^4$", "Vendor")   // java interprets all this as a chained line of replaceAll() 
+            .replaceAll("^5$", "Staff");
+        // anything left after this point is invalid, declare as such
+        access = access.replaceAll("^[0-9]*$", "INVALID ACCESS");
         
         // print pass
         // %-29.29s |%n is what dynamically changes padding. println cant do that, hence why use printf. could use string.format but that is clunky
