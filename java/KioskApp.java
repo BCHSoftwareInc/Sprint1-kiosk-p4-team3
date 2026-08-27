@@ -21,7 +21,8 @@ public class KioskApp
         System.out.print("Enter Contact Email: ");
         String email = scanner.nextLine().trim();
 
-        System.out.print("Enter Access Level: ");
+        System.out.println("Access Levels: 1=VIP  2=Speaker  3=Attendee  4=Vendor  5=Staff");
+        System.out.print("Enter Access Level Number (1-5): ");
         String access = scanner.nextLine().trim();
 
 
@@ -52,7 +53,7 @@ public class KioskApp
         access = access.replaceAll("^[0-9]*$", "INVALID ACCESS");
         
         // print pass
-        // %-29.29s |%n is what dynamically changes padding. println cant do that, hence why use printf. could use string.format but that is clunky
+        // %-29.29s |%n is what dynamically changes padding. println cant do that, hence why use printf. could use string.format but that is clunky and i already wrote this
         System.out.println();
         System.out.println("+------------------------------------------+");
         System.out.println("|         APEX ENTERTAINMENT PASS          |");
